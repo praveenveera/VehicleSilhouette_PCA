@@ -8,19 +8,21 @@ The purpose is to classify a given silhouette as one of three types of vehicle, 
 ------------------------------
 
 # Project Summary:
-The vehicle.csv data was processed for Null Values, duplicate values and Outliers.
-Outliers are neutalized with median of the respective columns
-Correlation amoung the various features are observed.
-The data was scaled using zscore and made ready to use for modelling.
-From Elbow Curve we observed the characteristics of the data shared along the explained variance and Priciple components. Finallised to go with 9 Components which is covered almost 95% more data.
-Applied SVM, Gaussian and GridSearch with SVM model to the reduced features.
-The best test data prediction accuracy from PCA is 95.7% was scored from GridSearch classifier (SVM: {'C': 10, 'gamma': 'auto', 'kernel': 'rbf'})
-We also applied SVM, Gaussian and GridSearch with SVM model to the data without reducing features to understand the data and model behaviour.
-Below are comparision amount the models with PCA and without PCA.
-Acc -          PCA , without PCA 
-SVM -          93.2% , 94.4%
-Gaussian -     85.2  , 69.3%
-GridSearch -   95.7% , 98.1%
-From the above we could see that the best PCA score from GridSearch classifier was actualy 3 units less compared to the score given by dataset with all features.
+
+- The vehicle.csv data was processed for Null Values, duplicate values and Outliers.
+- Outliers are neutalized with median of the respective columns
+- Correlation amoung the various features are observed.
+- The data was scaled using zscore and made ready to use for modelling.
+- From Elbow Curve we observed the characteristics of the data shared along the explained variance and Priciple components. Finallised to go with 9 Components which is covered almost 95% more data.
+- Applied SVM, Gaussian and GridSearch with SVM model to the reduced features.
+- The best test data prediction accuracy from PCA is 95.7% was scored from GridSearch classifier (SVM: {'C': 10, 'gamma': 'auto', 'kernel': 'rbf'})
+- We also applied SVM, Gaussian and GridSearch with SVM model to the data without reducing features to understand the data and model behaviour.
+- Below are comparision amount the models with PCA and without PCA.
+		Acc -          PCA , without PCA 
+		SVM -          93.2% , 94.4%
+		Gaussian -     85.2  , 69.3%
+		GridSearch -   95.7% , 98.1%
+- From the above we could see that the best PCA score from GridSearch - classifier was actualy 3 units less compared to the score given by dataset with all features.
+
 ## Conclusion:
 Overall from the above analysis we can say that PCA has done a very good job with proven accuracy. Accuracy with PCA is approx near to the accuracy of the all features data. The PCA given accuracy 94% is only 8 dimension where as actual data has 18 dimension with accurary 98%
